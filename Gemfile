@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '1.9.3'
+ruby
 
 gem 'rails', '~> 3.2.17'
 gem 'active_model_serializers'
@@ -12,7 +12,7 @@ gem 'trollop'
 gem 'opendelivery'
 gem 'aws-sdk', '1.16.0'
 gem 'encrypto_signo'
-gem 'rugged', github: 'libgit2/rugged', branch: 'development', submodules: true
+gem 'rugged'
 
 gem 'pg'
 group :assets do
