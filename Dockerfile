@@ -17,9 +17,7 @@ RUN chmod uog+r /etc/gemrc
 RUN bundle config --global build.nokogiri  "--use-system-libraries"
 RUN bundle config --global build.nokogumbo "--use-system-libraries"
 RUN find / -type f -iname \*.apk-new -delete
-RUN rm -rf /var/cache/apk/*
-RUN rm -rf /usr/lib/lib/ruby/gems/*/cache/*
-RUN rm -rf ~/.gem
+RUN /bin/true && rm -rf /var/cache/apk/* /usr/lib/lib/ruby/gems/*/cache/* ~/.gem
 
 # Install Canaryboard
 RUN rm -rf /opt/canaryboard && git clone https://github.com/Goggot/canaryboard.git /opt/canaryboard
