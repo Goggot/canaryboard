@@ -22,8 +22,7 @@ RUN rm -rf /usr/lib/lib/ruby/gems/*/cache/*
 RUN rm -rf ~/.gem
 
 # Install Canaryboard
-RUN mkdir -p /opt/canaryboard
-RUN $(cd /opt/canaryboard && git pull) || git clone https://github.com/Goggot/canaryboard.git /opt/canaryboard
+RUN rm -rf /opt/canaryboard && git clone https://github.com/Goggot/canaryboard.git /opt/canaryboard
 RUN cd /opt/canaryboard && sh build.sh
 
 # Define container
