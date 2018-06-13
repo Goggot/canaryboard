@@ -14,6 +14,7 @@ gem 'opendelivery'
 gem 'aws-sdk', '1.16.0'
 gem 'encrypto_signo'
 gem 'rugged'
+gem 'test-unit'
 
 gem 'pg'
 group :assets do
